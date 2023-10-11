@@ -62,7 +62,7 @@
             </div>
         </div>
     </div>
-    
+    <div id="button" type="button" class="btn btn-success" onclick="reset()">New Game</div>
   </body>
     <script>
         let ids =[]
@@ -139,7 +139,19 @@
           pen_text.innerHTML=`Penalty is ${penalty}`
           help_text = document.getElementById("help")
           help_text.innerHTML=`Help report ${report}`
-        }
+        }4
+  
+        function reset() {
+            checkCount = 0;
+            penalty = 0
+            treasureLocation = Math.round(Math.random() * (24));
+            trapLocation = Math.round(Math.random() * (24));
+            document.getElementById("locations").innerHTML = `Number of locations checked is ${checkCount}`
+            document.getElementById("penalty").innerHTML = `Penalty is ${penalty}`
 
+        }
+            </script>
+          
+            </html>
 </script>       
 </html>
